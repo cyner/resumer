@@ -12,7 +12,7 @@ Simple single page demo WebApp scripted using Ember.JS and Rails as a backend.
     $ bundle
     $ cp config/database.yml.example config/database.yml
     $ bundle exec rake db:setup
-    $ rails s
+    $ bundle exec rails s
 
 ### Frontend
 

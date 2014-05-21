@@ -1,0 +1,17 @@
+<h2>Login</h2>
+
+<div class="row">
+  <div class="medium-6 medium-offset-3 columns">
+    {{#if loginErrorMessage}}
+    <h5 class="text-danger">{{loginErrorMessage}}</div>
+    {{/if}}
+
+    <form {{action 'authenticate' on='submit'}}>
+      <label for="identification">Login</label>
+      {{input id='identification' placeholder='Enter Login' value=identification}}
+      <label for="password">Password</label>
+      {{input id='password' placeholder='Enter Password' type='password' value=password}}
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>

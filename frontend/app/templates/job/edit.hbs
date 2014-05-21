@@ -1,0 +1,19 @@
+<form>
+  <div class="row">
+    <div class="large-6 columns">
+      <label {{bind-attr class="isNameValid::error"}}>Name
+        {{input value=name}}
+      </label>
+
+      {{#if errors.name}}
+      <small class="error">{{errors.name}}</small>
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-6 columns">
+      <button class="button" {{action "save"}}>Save</button>
+    </div>
+  </div>
+</form>

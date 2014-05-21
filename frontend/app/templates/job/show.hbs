@@ -1,0 +1,19 @@
+{{#view 'upload' job=this}}
+
+  <div class="upload">
+    <div class="drop-here">
+      Drop CV here...
+    </div>
+
+    {{#if view.error}}
+      <span class="text-danger">{{view.error}}</span>
+    {{/if}}
+
+    <div {{bind-attr class=":progress :large :success :round view.progress::hidden"}}>
+      <span class="meter" {{bind-attr style=view.widthString}}></span>
+    </div>
+  </div>
+
+{{/view}}
+
+{{render 'resumes' resumes}}

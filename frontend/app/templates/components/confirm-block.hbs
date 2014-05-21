@@ -1,0 +1,5 @@
+{{#if isShowingConfirmation}}
+  <a {{action "confirm"}}><i class="fa fa-check"></i> Confirm!</a>
+{{else}}
+  <a {{action "showConfirmation"}}>{{yield}}</a>
+{{/if}}

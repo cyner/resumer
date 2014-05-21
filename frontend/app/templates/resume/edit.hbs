@@ -1,0 +1,65 @@
+<form>
+  <div class="row">
+    <div class="large-6 columns">
+      <label {{bind-attr class="isNameValid::error"}}>Name
+        {{input value=name}}
+      </label>
+
+      {{#if errors.name}}
+      <small class="error">{{errors.name}}</small>
+      {{/if}}
+    </div>
+
+    <div class="large-6 columns">
+      <label>Github Nickname
+        {{input value=github}}
+      </label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Rating (higher is better)</label>
+        {{view Ember.Select content=ratings optionValuePath="content.id" optionLabelPath="content.label" value=rating}}
+      </label>
+    </div>
+  </div>
+
+  <div class="row cover-letter">
+    <div class="large-6 columns">
+      <label>Cover Letter (supports Markdown syntax)
+        {{textarea value=cover_letter}}
+      </label>
+    </div>
+
+    {{#if coverLetterToMarkdown}}
+    <div class="markdown-container">
+      <div class="large-12 columns markdown-html">
+        {{{coverLetterToMarkdown}}}
+      </div>
+    </div>
+    {{/if}}
+  </div>
+
+  <div class="row notes">
+    <div class="large-6 columns">
+      <label>Notes (supports Markdown syntax)
+        {{textarea value=notes}}
+      </label>
+    </div>
+
+    {{#if notesToMarkdown}}
+    <div class="markdown-container">
+      <div class="large-12 columns markdown-html">
+        {{{notesToMarkdown}}}
+      </div>
+    </div>
+    {{/if}}
+  </div>
+
+  <div class="row">
+    <div class="large-6 columns">
+      <button class="button" {{action "save"}}>Save</button>
+    </div>
+  </div>
+</form>

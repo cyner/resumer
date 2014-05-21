@@ -1,0 +1,94 @@
+@import "../../vendor/foundation/scss/normalize";
+@import "../../vendor/foundation/scss/foundation";
+
+@import "../../vendor/fontawesome/scss/font-awesome";
+
+nav.top-bar {
+  margin-bottom: 20px;
+}
+
+.text-danger {
+  &, a {
+    color: #f30;
+  }
+}
+
+h1, h2, h3, h4, .buttons {
+  text-align: center;
+}
+
+.upload {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+
+  .drop-here {
+    border: 5px dotted #ccc;
+    color: #999;
+    border-radius: 25px;
+    width: 400px;
+    height: 150px;
+
+    text-align: center;
+    margin-bottom: 10px;
+
+    line-height: 140px;
+    font-size: 26px;
+
+    &.grab-active {
+      border-color: #666;
+      color: #000;
+    }
+  }
+}
+
+.cover-letter {
+  textarea, .markdown-container {
+    height: 300px;
+  }
+}
+
+.notes {
+  textarea, .markdown-container {
+    height: 200px;
+  }
+}
+
+
+.markdown-container {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    box-shadow: 0 0 1px rgba(255,255,255,.5);
+  }
+
+  .markdown-html {
+    margin-top: 21px;
+  }
+}
+
+.markdown-html {
+  border: 1px solid #666;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.applicant-info {
+  .row {
+    padding: 10px 0;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+table {
+  margin: 0 auto;
+}

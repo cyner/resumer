@@ -1,0 +1,25 @@
+<div class="buttons">
+  {{#link-to 'jobs.new' classNames="button small radius new-job"}}<i class="fa fa-plus-square fa-lg fa-fw"></i> New Job{{/link-to}}
+</div>
+
+<table class="responsive">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each}}
+    <tr>
+      <td>{{link-to name 'job.show' this}}</td>
+      <td>{{#link-to 'job.edit' this}}<i class="fa fa-cog"></i> Edit{{/link-to}}</td>
+      <td class="text-danger">
+        {{#confirm-block action="deleteJob" param=this}}
+          <i class="fa fa-trash-o"></i> Remove
+        {{/confirm-block}}
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

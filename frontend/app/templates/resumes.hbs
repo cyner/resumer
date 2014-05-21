@@ -1,0 +1,25 @@
+<table class="responsive">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Github</th>
+      <th>Rating</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each}}
+    <tr>
+      <td>{{link-to name 'resume' this}}</td>
+      <td>{{github}}</td>
+      <td>{{rating}}</td>
+      <td>{{#link-to 'resume.edit' this}}<i class="fa fa-cog"></i> Edit{{/link-to}}</td>
+      <td class="text-danger">
+        {{#confirm-block action="deleteResume" param=this}}
+          <i class="fa fa-trash-o"></i> Remove
+        {{/confirm-block}}
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

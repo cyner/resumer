@@ -1,0 +1,57 @@
+<div class="applicant-info">
+  {{#if cv_url}}
+  <div class="row">
+    <div class="large-2 columns">
+      <strong>CV</strong>
+    </div>
+
+    <div class="large-10 columns">
+      <a {{bind-attr href=cv_url}} target="_blank">{{cv_file_name}}</a>
+    </div>
+  </div>
+  {{/if}}
+
+  {{#if github}}
+  <div class="row">
+    <div class="large-2 columns">
+      <strong>GitHub</strong>
+    </div>
+
+    <div class="large-10 columns">
+      <a {{bind-attr href=githubUrl}} target="_blank">{{github}}</a>
+    </div>
+  </div>
+  {{/if}}
+
+  {{#if rating}}
+  <div class="row">
+    <div class="large-2 columns">
+      <strong>Rating</strong>
+    </div>
+
+    <div class="large-10 columns">
+      {{progress-bar progress=ratingPercent changeColor="true"}}
+    </div>
+  </div>
+  {{/if}}
+</div>
+
+{{#if coverLetterToMarkdown}}
+<div class="row">
+  <div class="large-12 columns">
+    <h4>Cover Letter</h4>
+
+    <div class="markdown-html">{{{coverLetterToMarkdown}}}</div>
+  </div>
+</div>
+{{/if}}
+
+{{#if notesToMarkdown}}
+<div class="row">
+  <div class="large-12 columns">
+    <h4>Notes</h4>
+
+    <div class="markdown-html">{{{notesToMarkdown}}}</div>
+  </div>
+</div>
+{{/if}}

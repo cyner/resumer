@@ -26,8 +26,8 @@ $(function() {
   var spinner = new Spinner(opts).spin(target);
 });
 
-$(document).ajaxStart(function() {
-  $("#loading_modal").fadeIn(400);
+$(document).ajaxSend(function(evt, request, settings) {
+  if(settings.type != "GET") $("#loading_modal").fadeIn(400);
 });
 
 $(document).ajaxStop(function() {

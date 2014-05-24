@@ -2,6 +2,8 @@
 
 Simple single page demo WebApp scripted using Ember.JS and Rails as a backend.
 
+Demo can be found at [resumer.deployment.cz](http://resumer.deployment.cz)
+
 ## Installing ##
 
     $ git@github.com:cyner/resumer.git

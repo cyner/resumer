@@ -56,7 +56,7 @@ var UploadView = Ember.View.extend({
       }
 
       self.set('progress', 0);
-      this.removeActive();
+      self.removeActive();
     });
   },
 

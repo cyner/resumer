@@ -9,8 +9,7 @@
     "DS": true,
     "$": true,
     "ENV": true,
-    "module": true,
-    "Pretender": true
+    "module": true
   },
   "node" : false,
   "browser" : false,

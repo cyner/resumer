@@ -26,6 +26,11 @@ Demo can be found at [resumer.deployment.cz](http://resumer.deployment.cz)
 
 ## Running Tests
 
+### Frontend
+
+    $ npm install phantomjs -g
+    $ ember test
+
 ### Backend
 
     $ cd backend

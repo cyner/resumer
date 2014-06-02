@@ -1,7 +1,3 @@
-/* global require */
-
-var authenticate = require('resumer/tests/helpers/authenticate')['default'];
-
 import startApp from 'resumer/tests/helpers/start-app';
 
 var App, server;
@@ -35,7 +31,7 @@ module('Integration - Jobs Page', {
 });
 
 test('Should show the Job name after loging in', function() {
-  authenticate();
+  window.authenticate();
   visit('/job/1');
 
   andThen(function() {

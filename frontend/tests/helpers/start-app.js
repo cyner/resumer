@@ -1,5 +1,6 @@
 /* global require */
 
+window.authenticate = require('resumer/tests/helpers/authenticate')['default'];
 var Application = require('resumer/app')['default'];
 var Router = require('resumer/router')['default'];
 
